@@ -5,7 +5,7 @@ After=network.target
 [Service]
 EnvironmentFile=/etc/electrumx.conf
 ExecStart=/home/(USERNAME_ON_COMPUTER)/source/electrumx/electrumx_server.py
-User=electrumsmiley1
+User=(USERNAME_ON_COMPUTER)
 LimitNOFILE=8192
 TimeoutStopSec=30min
 
