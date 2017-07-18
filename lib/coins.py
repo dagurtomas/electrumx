@@ -318,6 +318,26 @@ class AuxPowMixin(object):
         return block.read_header(height, cls.BASIC_HEADER_SIZE)
 
 
+class Smileycoin(Coin):
+    NAME = "Smileycoin"
+    SHORTNAME = "SMLY"
+    NET = "mainnet"
+    P2PKH_VERBYTE = bytes.fromhex("19")
+    P2SH_VERBYTES = [bytes.fromhex("05")]
+    WIF_BYTE = bytes.fromhex("99")
+    GENESIS_HASH = ('660f734cf6c6d16111bde201bbd21228'
+                    '73f2f2c078b969779b9d4c99732354fd')
+    TX_COUNT = 258268
+    TX_COUNT_HEIGHT = 215623
+    TX_PER_BLOCK = 1800
+    RPC_PORT = 30000
+    PEERS = [
+        '130.208.71.203',
+        '130.208.151.244'
+    ]
+    DAEMON = Daemon
+
+
 class Bitcoin(Coin):
     NAME = "Bitcoin"
     SHORTNAME = "BTC"
